@@ -48,7 +48,7 @@
                 "merge_branch": {
                     "source": "appguard-updates-composer",
                     "target": [
-                        "composer-master"
+                        "composer-composer-merged"
                     ],
                     "delete_after_merge": false
                 }
