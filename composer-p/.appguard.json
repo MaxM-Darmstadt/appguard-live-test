@@ -1,0 +1,69 @@
+{
+    "integrations": {
+        "project_management_system": {
+            "project": "AD",
+            "tracker": "Task",
+            "priority": "Medium",
+            "credential": "jira_default",
+            "task_status_to_ag_mapping": [],
+            "task_status_from_ag_mapping": {
+                "closed": "Done",
+                "execute_update": "In Progress"
+            }
+        }
+    },
+    "update_behaviors": {
+        "appguard-updates-composer": {
+            "types": [
+                "update_patch_version",
+                "update_minor_version",
+                "update_major_version"
+            ],
+            "auto_start_updates": "no"
+        }
+    },
+    "events": {
+        "new_updates_available": [
+            {
+                "sendmail": {
+                    "cc": "",
+                    "bcc": "",
+                    "emails": "beloglazov91@gmail.com",
+                    "message": "New updates available",
+                    "subject": "New updates available"
+                }
+            }
+        ],
+        "test_passed": [
+            {
+                "sendmail": {
+                    "cc": "",
+                    "bcc": "",
+                    "emails": "beloglazov91@gmail.com",
+                    "message": "Test passed",
+                    "subject": "Test passed!"
+                }
+            },
+            {
+                "merge_branch": {
+                    "source": "appguard-updates-composer",
+                    "target": [
+                        "composer-master"
+                    ],
+                    "delete_after_merge": false
+                }
+            }
+        ],
+        "failed": [
+            {
+                "sendmail": {
+                    "cc": "",
+                    "bcc": "",
+                    "emails": "beloglazov91@gmail.com",
+                    "message": "The task was failed",
+                    "subject": "The task was failed"
+                }
+            }
+        ]
+    }
+}
