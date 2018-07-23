@@ -17,7 +17,7 @@
     "new_updates_available": [
       {
         "sendmail": {
-          "emails": "belog____lazov@brightsolutions.de",
+          "emails": "belog____lazov@brightsolutions.de", 
           "subject": "New updates available!2018",
           "message": "New updates available",
           "cc": "",
