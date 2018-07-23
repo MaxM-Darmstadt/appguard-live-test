@@ -3,7 +3,7 @@
   
   },
   "update_behaviors": {
-                   "appguard-updates": {
+                  "appguard-updates": {
       "auto_start_updates": "always",
       "types": [
         "update_patch_version",
