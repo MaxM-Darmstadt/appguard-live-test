@@ -1,57 +1,63 @@
 {
-    "integrations": [],
-    "update_behaviors": {
-        "appguard-updates": {
-            "auto_start_updates": "always",
-            "types": [
-                "update_patch_version",
-                "update_minor_version",
-                "update_major_version"
-            ]
-        }
-    },
-    "events": {
-        "new_updates_available": [
-            {
-                "sendmail": {
-                    "emails": "beloglazov@brightsolutions.de",
-                    "subject": "New updates available!",
-                    "message": "New updates available",
-                    "cc": "",
-                    "bcc": ""
-                }
-            }
-        ],
-        "test_passed": [
-            {
-                "sendmail": {
-                    "emails": "beloglazov@brightsolutions.de",
-                    "subject": "Test passed",
-                    "message": "Test passed",
-                    "cc": "",
-                    "bcc": ""
-                }
-            },
-            {
-                "merge_branch": {
-                    "source": "appguard-updates",
-                    "delete_after_merge": false,
-                    "target": [
-                        "dev_ag_test"
-                    ]
-                }
-            }
-        ],
-        "failed": [
-            {
-                "sendmail": {
-                    "emails": "beloglazov@brightsolutions.de",
-                    "subject": "The task was failed",
-                    "message": "The task was failed",
-                    "cc": "",
-                    "bcc": ""
-                }
-            }
-        ]
+  "integrations": {
+  
+  },
+  "update_behaviors": {
+                   "appguard-updates": {
+      "auto_start_updates": "always",
+      "types": [
+        "update_patch_version",
+        "update_minor_version",
+        "update_major_version"
+      ]
     }
+  },
+  "events": {
+    "new_updates_available": [
+      {
+        "sendmail": {
+          "emails": "beloglazov@brightsolutions.de",
+          "subject": "New updates available!2018",
+          "message": "New updates available",
+          "cc": "",
+          "bcc": ""
+        }
+      }
+    ],
+    "test_passed": [
+      {
+        "sendmail": {
+          "emails": "beloglazov@brightsolutions.de",
+          "subject": "Test passed",
+          "message": "Test passed",
+          "cc": "",
+          "bcc": ""
+        }
+      },
+      {
+        "merge_branch": {
+          "source": "appguard-updates",
+          "delete_after_merge": false,
+          "target": ["dev_ag_test"]
+        }
+      }
+    ],
+    "failed": [
+      {
+        "sendmail": {
+          "emails": "beloglazov@brightsolutions.de",
+          "subject": "The task was failed",
+          "message": "The task was failed",
+          "cc": "",
+          "bcc": ""
+        }
+      }
+    ]
+  }
 }
+
+          
+          
+          
+          
+          
