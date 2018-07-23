@@ -1,9 +1,10 @@
-{
+
+          {
   "integrations": {
   
   },
   "update_behaviors": {
-                  "appguard-updates": {
+                   "appguard-updates": {
       "auto_start_updates": "always",
       "types": [
         "update_patch_version",
@@ -16,7 +17,7 @@
     "new_updates_available": [
       {
         "sendmail": {
-          "emails": "beloglazov@brightsolutions.de222",
+          "emails": "belog____lazov@brightsolutions.de",
           "subject": "New updates available!2018",
           "message": "New updates available",
           "cc": "",
