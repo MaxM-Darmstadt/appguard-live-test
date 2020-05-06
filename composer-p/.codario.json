@@ -1,0 +1,69 @@
+{
+    "integrations": {
+        "project_management_system": {
+            "credential": "AG Jira",
+            "project": "AD",
+            "tracker": "Task",
+            "priority": "Medium",
+            "task_status_to_ag_mapping": [],
+            "task_status_from_ag_mapping": {
+                "execute_update": "In Progress",
+                "closed": "Done"
+            }
+        }
+    },
+    "update_behaviors": {
+        "MaxM-Darmstadt-patch-2": {
+            "auto_start_updates": "no",
+            "types": [
+                "update_patch_version",
+                "update_minor_version",
+                "update_major_version"
+            ]
+        }
+    },
+    "events": {
+        "new_updates_available": [
+            {
+                "sendmail": {
+                    "emails": "max@maximilianmadl.de",
+                    "subject": "New updates available",
+                    "message": "New updates available",
+                    "cc": "",
+                    "bcc": ""
+                }
+            }
+        ],
+        "test_passed": [
+            {
+                "sendmail": {
+                    "emails": "max@maximilianmadl.de",
+                    "subject": "Test passed!",
+                    "message": "Test passed",
+                    "cc": "",
+                    "bcc": ""
+                }
+            },
+            {
+                "merge_branch": {
+                    "source": "MaxM-Darmstadt-patch-2",
+                    "delete_after_merge": false,
+                    "target": [
+                        "testmitmanuel-after-merge"
+                    ]
+                }
+            }
+        ],
+        "failed": [
+            {
+                "sendmail": {
+                    "emails": "max@maximilianmadl.de",
+                    "subject": "The task was failed",
+                    "message": "The task was failed",
+                    "cc": "",
+                    "bcc": ""
+                }
+            }
+        ]
+    }
+}
